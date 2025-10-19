@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: mcp-client-jdd
+  ai:
+    openai:
+      api-key: ${OPENAI_API_KEY}
+      chat:
+        options:
+          model: gpt-4o
+    mcp:
+      client:
+        sse:
+          connections:
+            task-mcp-server:
+              url: http://localhost:8060
+
+server:
+  port: 8090
