@@ -47,4 +47,11 @@ public class TaskController {
                 .user("Show me all my tasks")
                 .call().content();
     }
+
+    @GetMapping("/type")
+    String listOfTypes() {
+        return this.chatClient.prompt()
+                .user("Give list of possible task types")
+                .call().content();
+    }
 }
